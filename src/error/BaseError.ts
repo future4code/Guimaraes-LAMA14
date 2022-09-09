@@ -15,7 +15,11 @@ export class InvalidPassword extends CustomError {
     super(400, "Senha inválida");
   }
 }
-
+export class InvalidName extends CustomError {
+  constructor() {
+    super(400, "Nome de banda já existente");
+  }
+}
 export class UserNotFound extends CustomError {
   constructor() {
     super(404, "Usuário não encontrado");

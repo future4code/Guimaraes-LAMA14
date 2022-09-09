@@ -19,3 +19,11 @@ Content-Type: application/json
 }
 
 ### Registro de banda banda 
+POST http://localhost:3003/band/registration
+Content-Type: application/json
+
+{
+   "name": "Norvana",
+   "music_genre": "Rock",
+   "responsible": "Dinho Ouro Preto"
+}

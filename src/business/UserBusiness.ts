@@ -14,7 +14,6 @@ export class UserBusiness {
     const hashManager = new HashManager();
     const hashPassword = await hashManager.hash(user.password);
 
-    const userDatabase = new UserDatabase();
     const newUser = new User(
       id,
       user.name,
