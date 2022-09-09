@@ -16,7 +16,6 @@ export class BandDatabase extends BaseDatabase {
       .select("*")
       .from(BandDatabase.TABLE_BAND)
       .where({ name });
-
     return Band.toBandModel(result[0]);
   }
 }
