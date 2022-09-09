@@ -29,21 +29,6 @@ export class UserBusiness {
     return accessToken;
   };
 
-  // loginUser = async (login: LoginInputDTO) => {
-  //   const { email, password } = login;
-
-  //   if (!email || !password) {
-  //     throw new CustomError(400, 'Preencha os campos "email" e "password"');
-  //   }
-
-  //   if (!email.includes("@")) {
-  //     throw new InvalidEmail();
-  //   }
-  //   const user = await this.getUserByEmail({ email, password });
-
-  //   return user;
-  // };
-
   async getUserByEmail(user: LoginInputDTO) {
     const userDatabase = new UserDatabase();
     const userFromDB = await userDatabase.getUserByEmail(user.email);

@@ -2,7 +2,7 @@ import { string } from "yargs";
 import { BandDatabase } from "../data/BandDatabase";
 import { UserDatabase } from "../data/UserDatabase";
 import { InvalidName, Unauthorized } from "../error/BaseError";
-import { Band, BandInputDTO } from "../model/Band";
+import { Band, BandInputDTO, BandNameInput } from "../model/Band";
 import { UserRole } from "../model/User";
 import { Authenticator } from "../services/Authenticator";
 import { HashManager } from "../services/HashManager";
@@ -29,7 +29,11 @@ export class BandBusiness {
     await bandDatabase.bandRegistration(newBand);
     const accessToken = authenticator.generate({ id });
     return accessToken;
+  };
 
-    // FAZER AS VERIFICAÇÕES PARA QUE NÃO TENHA NOME DE BANDA REPEDIDA
+  getBand = async (input: BandNameInput) => {
+    const { name } = input;
+    const retornoBanda = await bandDatabase.getBandaByName(name);
+    return retornoBanda;
   };
 }

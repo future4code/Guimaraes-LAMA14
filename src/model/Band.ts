@@ -31,3 +31,7 @@ export interface BandInputDTO {
   music_genre: string;
   responsible: string;
 }
+
+export interface BandNameInput {
+  name: string;
+}
