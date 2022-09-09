@@ -6,13 +6,14 @@ const bandBusiness = new BandBusiness();
 export class BandController {
   async bandRegistration(req: Request, res: Response) {
     try {
+      const token = req.headers.authorization as string;
       const input: BandInputDTO = {
         name: req.body.name,
         music_genre: req.body.music_genre,
         responsible: req.body.responsible,
       };
 
-      await bandBusiness.bandRegistration(input);
+      await bandBusiness.bandRegistration(input, token);
       res.status(200).send(" Banda registrada com sucesso");
     } catch (error: any) {
       res.status(400).send({ error: error.message });
