@@ -3,13 +3,12 @@ import { UserDatabase } from "../data/UserDatabase";
 import { IdGenerator } from "../services/IdGenerator";
 import { HashManager } from "../services/HashManager";
 import { Authenticator } from "../services/Authenticator";
-import { CustomError, InvalidEmail, UserNotFound } from "../error/BaseError";
 
 const userDatabase = new UserDatabase();
 export class UserBusiness {
   createUser = async (user: UserInputDTO) => {
     const idGenerator = new IdGenerator();
-    const id = idGenerator.generate();
+    const id = idGenerator.generateId();
 
     const hashManager = new HashManager();
     const hashPassword = await hashManager.hash(user.password);

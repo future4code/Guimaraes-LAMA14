@@ -1,8 +1,12 @@
 import { v4 } from "uuid";
 
 export class IdGenerator{
-
-    generate(): string{
-        return v4();
+    static generateId() {
+      throw new Error("Method not implemented.");
     }
+
+    public generateId = () => {
+        return v4()
+    }
+   
 }

@@ -36,8 +36,14 @@ export class Show {
 }
 
 export interface ShowInputDTO {
-  week_day: string;
+  week_day: SHOW_DAY;
   start_time: string;
   end_time: string;
   band_id: string;
+}
+
+export enum SHOW_DAY {
+  FRIDAY = "friday",
+  SATURDAY = "saturday",
+  SUNDAY = "sunday"
 }

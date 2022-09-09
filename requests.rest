@@ -29,10 +29,23 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNGJkNWNhLTNhZjUt
    "responsible": "Ivete"
 }
 
-###
+### Detalhes da Banda
 GET http://localhost:3003/band/
 Content-Type: application/json
 
 {
    "name": "Banda Eva"
 }
+
+### Adicionar um show
+POST http://localhost:3003/registration
+Content-Type: application/json
+
+   {
+      "week_day": "Saturday",
+      "start_time": "10:00",
+      "end_time": "12:00",
+      "band_id": "1ffb0108-6766-4804-8792-198516c8b607"
+   }
+
+ 

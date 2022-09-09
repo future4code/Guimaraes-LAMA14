@@ -1,5 +1,5 @@
 import { BandDatabase } from "../data/BandDatabase";
-import { InvalidName, Unauthorized } from "../error/BaseError";
+import { InvalidName, Unauthorized } from "../error/CustomError";
 import { Band, BandInputDTO, BandNameInput } from "../model/Band";
 import { UserRole } from "../model/User";
 import { Authenticator } from "../services/Authenticator";
@@ -22,7 +22,7 @@ export class BandBusiness {
     }
 
     const idGenerator = new IdGenerator();
-    const id = idGenerator.generate();
+    const id = idGenerator.generateId();
     const newBand = new Band(id, name, music_genre, responsible);
     await bandDatabase.bandRegistration(newBand);
     const accessToken = authenticator.generate({ id });
