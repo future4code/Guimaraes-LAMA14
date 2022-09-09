@@ -3,10 +3,10 @@ POST http://localhost:3003/user/signup
 Content-Type: application/json
 
 {
-   "name": "Pati",
-   "email": "pati@email.com",
+   "name": "Kazu",
+   "email": "ka@email.com",
    "password": "1gfj3fgj2fj",
-   "role": "NORMAL"
+   "role": "ADMIN"
 }
 ### Login
 
@@ -21,9 +21,10 @@ Content-Type: application/json
 ### Registro de banda banda 
 POST http://localhost:3003/band/registration
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNGJkNWNhLTNhZjUtNGQ3Ny05OWVjLWM5ZWE2MDQ1NzIyYSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2Mjc0NDk1NywiZXhwIjoxNjYyODMxMzU3fQ.QBZtkJ7AZMcHYYPkSWJdnjih4iYWfeJxHP3D3RrUsUo
 
 {
-   "name": "Norvana",
-   "music_genre": "Rock",
-   "responsible": "Dinho Ouro Preto"
+   "name": "Banda Eva",
+   "music_genre": "Axé",
+   "responsible": "Ivete"
 }
