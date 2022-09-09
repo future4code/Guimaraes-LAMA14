@@ -1,3 +1,4 @@
+### Cadastro
 POST http://localhost:3003/user/signup
 Content-Type: application/json
 
@@ -7,3 +8,14 @@ Content-Type: application/json
    "password": "1gfj3fgj2fj",
    "role": "NORMAL"
 }
+### Login
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+   "email": "pati@email.com",
+   "password": "1gfj3fgj2fj"
+}
+
+### Registro de banda banda 

@@ -3,7 +3,9 @@ import { UserDatabase } from "../data/UserDatabase";
 import { IdGenerator } from "../services/IdGenerator";
 import { HashManager } from "../services/HashManager";
 import { Authenticator } from "../services/Authenticator";
+import { CustomError, InvalidEmail, UserNotFound } from "../error/BaseError";
 
+const userDatabase = new UserDatabase();
 export class UserBusiness {
   createUser = async (user: UserInputDTO) => {
     const idGenerator = new IdGenerator();
@@ -27,6 +29,21 @@ export class UserBusiness {
 
     return accessToken;
   };
+
+  // loginUser = async (login: LoginInputDTO) => {
+  //   const { email, password } = login;
+
+  //   if (!email || !password) {
+  //     throw new CustomError(400, 'Preencha os campos "email" e "password"');
+  //   }
+
+  //   if (!email.includes("@")) {
+  //     throw new InvalidEmail();
+  //   }
+  //   const user = await this.getUserByEmail({ email, password });
+
+  //   return user;
+  // };
 
   async getUserByEmail(user: LoginInputDTO) {
     const userDatabase = new UserDatabase();
