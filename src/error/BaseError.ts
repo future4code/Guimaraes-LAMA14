@@ -31,3 +31,9 @@ export class Unauthorized extends CustomError {
     super(401, "Usuário não autorizado");
   }
 }
+
+export class invalidTime extends CustomError {
+  constructor() {
+    super(400, "Horário inválido");
+  }
+}
