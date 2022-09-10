@@ -14,7 +14,7 @@ export class BandController {
       };
 
       await bandBusiness.bandRegistration(input, token);
-      res.status(200).send(" Banda registrada com sucesso");
+      res.status(201).send(" Banda registrada com sucesso");
     } catch (error: any) {
       res.status(400).send({ error: error.message });
     }

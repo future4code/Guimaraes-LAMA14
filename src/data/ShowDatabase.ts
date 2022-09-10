@@ -6,7 +6,7 @@ export class ShowDatabase extends BaseDatabase {
 
   public postShow = async (show: Show): Promise<void> => {
     try {
-      await ShowDatabase.connection(ShowDatabase.TABLE_SHOW).insert(Show);
+      await ShowDatabase.connection(ShowDatabase.TABLE_SHOW).insert(show);
     } catch (error: any) {
       throw new Error(error.sqlMessage || error.message);
     }

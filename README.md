@@ -1,5 +1,4 @@
-# Labenu Music Awards
-image.png
+# Labenu Music Awards 🎶
 
 📜 Sobre o Projeto
  O projeto teve como objetivo planejar um grande evento: o **LAMA**, *Labenu Musical Awards*, um festival  com várias bandas famosas para a formatura da sua turma. Onde encontram-se funções de:
@@ -29,7 +28,7 @@ image.png
 💻 Documentação
 // link heroku
 
-Desenvolvedoras
+Desenvolvedoras:
 👩‍💻 Ana Inada
 👩‍💻 Patrícia Quarezemin
 
