@@ -1,6 +1,6 @@
 import { ShowDatabase } from "../data/ShowDatabase";
 import { InvalidFields, invalidTime, InvalidWeekday, MissingToken } from "../error/CustomError";
-import { Show, ShowInputDTO, SHOW_DAY } from "../model/Show";
+import { Show, ShowDayInput, ShowInputDTO, SHOW_DAY } from "../model/Show";
 import { Authenticator } from "../services/Authenticator";
 import { IdGenerator } from "../services/IdGenerator";
 
@@ -42,7 +42,14 @@ export class ShowBusiness {
     const newShow = new Show(id, week_day, start_time, end_time, band_id)
     await showDataBase.postShow(newShow)
     const accessToken = authenticator.generate({ id })
+    console.log(accessToken)
     return accessToken
+  }
+
+  getShow = async (input: ShowDayInput) => {
+    const { week_day } = input
+    const returnShow = await showDataBase.getShowData(week_day)
+    return returnShow
   }
 }
 

@@ -31,7 +31,9 @@ export class BandBusiness {
 
   getBand = async (input: BandNameInput) => {
     const { name } = input;
+    console.log(input)
     const retornoBanda = await bandDatabase.getBandaByName(name);
+    console.log(retornoBanda)
     return retornoBanda;
   };
 }

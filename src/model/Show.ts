@@ -47,3 +47,8 @@ export enum SHOW_DAY {
   SATURDAY = "saturday",
   SUNDAY = "sunday"
 }
+
+export interface ShowDayInput {
+  week_day: string;
+}
+
