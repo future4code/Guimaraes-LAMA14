@@ -3,6 +3,7 @@ import { BandBusiness } from "../business/BandBusiness";
 import { BandInputDTO, BandNameInput } from "../model/Band";
 
 const bandBusiness = new BandBusiness();
+
 export class BandController {
   async bandRegistration(req: Request, res: Response) {
     try {

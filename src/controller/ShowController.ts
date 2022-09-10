@@ -9,7 +9,7 @@ export class ShowController {
         try {
 
             const token = req.headers.authorization as string
-            
+
             const { week_day, start_time, end_time, band_id } = req.body
 
             const input: ShowInputDTO = {
@@ -18,8 +18,6 @@ export class ShowController {
                 end_time: end_time,
                 band_id: band_id
             }
-            console.log(input)
-
             await showBusiness.postShow(input, token)
             res.status(201).send({ message: 'Show registrado com sucesso!' })
         } catch (error: any) {
@@ -34,10 +32,11 @@ export class ShowController {
             }
 
             const result = await showBusiness.getShow(input)
-            res.status(200).send({result})
-            
+            console.log(result)
+            res.status(200).send({ result })
+
         } catch (error: any) {
-            res.status(400).send({error: error.message})
+            res.status(400).send({ error: error.message })
         }
     }
 }

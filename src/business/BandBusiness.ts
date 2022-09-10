@@ -7,7 +7,9 @@ import { IdGenerator } from "../services/IdGenerator";
 
 const bandDatabase = new BandDatabase();
 const authenticator = new Authenticator();
+
 export class BandBusiness {
+
   bandRegistration = async (input: BandInputDTO, token: string) => {
     const user = authenticator.getData(token);
     if (user.role !== UserRole.ADMIN) {
@@ -23,17 +25,17 @@ export class BandBusiness {
 
     const idGenerator = new IdGenerator();
     const id = idGenerator.generateId();
+
     const newBand = new Band(id, name, music_genre, responsible);
     await bandDatabase.bandRegistration(newBand);
+
     const accessToken = authenticator.generate({ id });
     return accessToken;
   };
 
   getBand = async (input: BandNameInput) => {
     const { name } = input;
-    console.log(input)
     const retornoBanda = await bandDatabase.getBandaByName(name);
-    console.log(retornoBanda)
     return retornoBanda;
   };
 }
