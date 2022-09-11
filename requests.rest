@@ -48,4 +48,12 @@ Content-Type: application/json
       "band_id": "1ffb0108-6766-4804-8792-198516c8b607"
    }
 
+### Pegar todos os Shows de uma data
+GET http://localhost:3003/show
+Content-Type: application/json
+
+{
+   "week_day": "Saturday",
+}
+
  
