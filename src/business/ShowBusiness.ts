@@ -48,6 +48,7 @@ export class ShowBusiness {
   getShow = async (input: ShowDayInput) => {
     const { week_day } = input
     const returnShow = await showDataBase.getShowData(week_day)
+    console.log(returnShow)
     return returnShow
   }
 }
