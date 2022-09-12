@@ -14,19 +14,19 @@ POST http://localhost:3003/user/login
 Content-Type: application/json
 
 {
-   "email": "pati@email.com",
+   "email": "ka@email.com",
    "password": "1gfj3fgj2fj"
 }
 
 ### Registro de banda banda 
 POST http://localhost:3003/band/registration
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNGJkNWNhLTNhZjUtNGQ3Ny05OWVjLWM5ZWE2MDQ1NzIyYSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2Mjc0NDk1NywiZXhwIjoxNjYyODMxMzU3fQ.QBZtkJ7AZMcHYYPkSWJdnjih4iYWfeJxHP3D3RrUsUo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNGJkNWNhLTNhZjUtNGQ3Ny05OWVjLWM5ZWE2MDQ1NzIyYSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MjkzOTg3MSwiZXhwIjoxNjYzMDI2MjcxfQ.Jk4Yu6OGN_QlvJkP3--tojYAT7bEui2YCXaGAzFelto
 
 {
-   "name": "Banda Eva",
-   "music_genre": "Axé",
-   "responsible": "Ivete"
+   "name": "Capital inicial",
+   "music_genre": "Rock",
+   "responsible": "Dinho"
 }
 
 ### Detalhes da Banda
@@ -38,22 +38,23 @@ Content-Type: application/json
 }
 
 ### Adicionar um show
-POST http://localhost:3003/registration
+POST http://localhost:3003/show/registration
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNGJkNWNhLTNhZjUtNGQ3Ny05OWVjLWM5ZWE2MDQ1NzIyYSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MjkzOTg3MSwiZXhwIjoxNjYzMDI2MjcxfQ.Jk4Yu6OGN_QlvJkP3--tojYAT7bEui2YCXaGAzFelto
 
    {
-      "week_day": "Saturday",
-      "start_time": "10:00",
-      "end_time": "12:00",
-      "band_id": "1ffb0108-6766-4804-8792-198516c8b607"
+      "week_day": "sunday",
+      "start_time": 12.00,
+      "end_time": 14.00,
+      "band_id": "55f7cc8b-0a1e-4188-9f0e-fe497b01afd4"
    }
 
 ### Pegar todos os Shows de uma data
-GET http://localhost:3003/show
+GET http://localhost:3003/show/
 Content-Type: application/json
 
 {
-   "week_day": "Saturday",
+   "week_day": "saturday"
 }
 
  

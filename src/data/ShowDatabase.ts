@@ -20,11 +20,15 @@ export class ShowDatabase extends BaseDatabase {
     return Show.toShowModel(result[0]);
   }
 
-  public async getShowData (week_day: string): Promise<any> {
+  public async getShowData(week_day: string): Promise<any> {
     const result = await ShowDatabase.connection()
-    .select("*")
-    .from(ShowDatabase.TABLE_SHOW)
-    .where({week_day})
-    return Show.toShowModel(result)
+      .select(["Bandas_lama.name", "Bandas_lama.music_genre"])
+      .from("Shows_lama")
+      .innerJoin("Bandas_lama", "Bandas_lama.id", "Shows_lama.band_id")
+      .where("Shows_lama.week_day", week_day)
+      .orderBy("Shows_lama.start_time", "asc");
+
+    console.log(result);
+    return result;
   }
 }
