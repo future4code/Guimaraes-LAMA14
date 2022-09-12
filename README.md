@@ -26,7 +26,9 @@
 - Json web token
 
 💻 Documentação
-// link heroku
+
+https://documenter.getpostman.com/view/19714222/2s7YYr8Q3y 
+
 
 Desenvolvedoras:
 👩‍💻 Ana Inada
