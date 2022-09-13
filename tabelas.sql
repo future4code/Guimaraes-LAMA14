@@ -35,3 +35,13 @@ CREATE TABLE IF NOT EXISTS Ingressos_lama (
   FOREIGN KEY(id_show) REFERENCES Shows_lama (id)
 );
 
+CREATE TABLE IF NOT EXISTS Comprar_ingressos_lama (
+  id VARCHAR(255) PRIMARY KEY,
+  id_user VARCHAR(255) NOT NULL,
+  tickets INT NOT NULL,
+  id_tickets VARCHAR(255),
+  FOREIGN KEY(id_user) REFERENCES User_lama (id),
+  FOREIGN KEY(id_tickets) REFERENCES Ingressos_lama (id)
+);
+
+
