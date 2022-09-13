@@ -27,8 +27,6 @@ export class ShowDatabase extends BaseDatabase {
       .innerJoin("Bandas_lama", "Bandas_lama.id", "Shows_lama.band_id")
       .where("Shows_lama.week_day", week_day)
       .orderBy("Shows_lama.start_time", "asc");
-
-    console.log(result);
     return result;
   }
 }

@@ -1,4 +1,4 @@
-# não precisa executar outra vez, já que está no banco de dados da Ana-inada
+
 CREATE TABLE IF NOT EXISTS Bandas_lama (
   id VARCHAR(255) PRIMARY KEY,
   name VARCHAR(255) UNIQUE NOT NULL,
@@ -23,3 +23,15 @@ CREATE TABLE IF NOT EXISTS User_lama (
   password VARCHAR(255) NOT NULL,
   role VARCHAR(255) NOT NULL DEFAULT "NORMAL"
 );
+
+
+CREATE TABLE IF NOT EXISTS Ingressos_lama (
+  id VARCHAR(255) PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  value DECIMAL NOT NULL,
+  tickets_qty INT NOT NULL,
+  tickets_balance INT NOT NULL,
+  id_show VARCHAR(255),
+  FOREIGN KEY(id_show) REFERENCES Shows_lama (id)
+);
+
