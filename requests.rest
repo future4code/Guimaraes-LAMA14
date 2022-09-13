@@ -21,12 +21,12 @@ Content-Type: application/json
 ### Registro de banda banda 
 POST http://localhost:3003/band/registration
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNGJkNWNhLTNhZjUtNGQ3Ny05OWVjLWM5ZWE2MDQ1NzIyYSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MjkzOTg3MSwiZXhwIjoxNjYzMDI2MjcxfQ.Jk4Yu6OGN_QlvJkP3--tojYAT7bEui2YCXaGAzFelto
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNGJkNWNhLTNhZjUtNGQ3Ny05OWVjLWM5ZWE2MDQ1NzIyYSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MzAyNzc5MSwiZXhwIjoxNjYzMTE0MTkxfQ.-ye5GpzdWvQqxs8SsVXJiFOcFsY4SFYR3CcQ2K3QJpo
 
 {
-   "name": "Capital inicial",
+   "name": "Lucro",
    "music_genre": "Rock",
-   "responsible": "Dinho"
+   "responsible": "Elon Musk"
 }
 
 ### Detalhes da Banda
@@ -43,10 +43,10 @@ Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNGJkNWNhLTNhZjUtNGQ3Ny05OWVjLWM5ZWE2MDQ1NzIyYSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MjkzOTg3MSwiZXhwIjoxNjYzMDI2MjcxfQ.Jk4Yu6OGN_QlvJkP3--tojYAT7bEui2YCXaGAzFelto
 
    {
-      "week_day": "sunday",
+      "week_day": "friday",
       "start_time": 12.00,
       "end_time": 14.00,
-      "band_id": "55f7cc8b-0a1e-4188-9f0e-fe497b01afd4"
+      "band_id": "944a7275-9718-4cb1-9958-c6134897eed6"
    }
 
 ### Pegar todos os Shows de uma data
@@ -56,5 +56,18 @@ Content-Type: application/json
 {
    "week_day": "saturday"
 }
+
+### DESAFIO - criar ingressos de um show específico 
+POST http://localhost:3003/ticket
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNGJkNWNhLTNhZjUtNGQ3Ny05OWVjLWM5ZWE2MDQ1NzIyYSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MzAyNzAzNiwiZXhwIjoxNjYzMTEzNDM2fQ.lkvrZebm80RAsbBJboxoYgEfZ-jHLiavY7LXOl85IdY
+
+   {
+      "name": "Show do Fresno",
+      "value": 30,
+      "tickets_qty": 70,
+      "tickets_balance": 0,
+      "id_show": "7ca665f9-a1f2-4462-85ea-88a95de58588"
+   }
 
  
